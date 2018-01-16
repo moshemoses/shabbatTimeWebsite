@@ -1,4 +1,3 @@
-// ./app.py
 
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from random import randint
