@@ -10,7 +10,7 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     #return name
-    rover = request.environ['REMOTE_ADDR']
+    rover = request.environ.get('HTTP_X_REAL_IP', request.remote_addr)
     Candletime = shabbos_web_class.return_candletime_string()
     countdown = shabbos_web_class.time_remaining()
 
