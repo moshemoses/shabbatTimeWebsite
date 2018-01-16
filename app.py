@@ -1,7 +1,7 @@
 
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from random import randint
-import shabbos2_web
+import shabbos_web_class
 
 
 
@@ -11,8 +11,8 @@ app = Flask(__name__)
 def index():
     #return name
      
-    Candletime = shabbos2_web.time_stmt()
-    countdown = shabbos2_web.timetil()
+    Candletime = shabbos_web_class.return_candletime_string()
+    countdown = shabbos_web_class.time_remaining()
 
 
     return render_template(
