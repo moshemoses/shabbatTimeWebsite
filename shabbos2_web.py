@@ -37,8 +37,8 @@ def time_stmt():
 
 		for i in range(0, len(data)):
 			if data[i].get('category') == 'candles' or data[i].get('category') == 'havdalah':
-	       			date_retrival= data[i].get('date')
-        			date_retrival2 = date_retrival.split('T')
+	       		date_retrival= data[i].get('date')
+        		date_retrival2 = date_retrival.split('T')
 				time = date_retrival2[1].split('-')
 				date_plus_time = date_retrival2[0] +" "+ time[0]
 				date_obj = datetime.datetime.strptime(date_plus_time, '%Y-%m-%d %H:%M:%S')
