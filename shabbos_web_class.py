@@ -11,7 +11,8 @@ def get_data():
 	import requests, json, datetime
 	#grabs your latitude, longitude and Time zone
 	current_year = datetime.datetime.now().strftime('%Y')
-	loc_request=requests.get('http://ip-api.com/json')
+	loc_data = IPadd()
+	loc_request=requests.get('http://ip-api.com/json/'+ loc_data)
 	type(loc_request)
 	loc_request.status_code==requests.codes.ok
 	loc_request_json_data = loc_request.text
