@@ -91,7 +91,7 @@ def time_remaining():
 	fl_seconds_remain = float(seconds)
 	in_seconds_remain = int(fl_seconds_remain)
 	seconds_remain =str(in_seconds_remain)
-	return "You have " + days_remain + " days, " + hours_remain + " hours, and " + minutes_remain +" minutes and " + seconds_remain + " seconds to go"
+	return "You have " + days_remain + " days, " + hours_remain + " hours, " + minutes_remain +" minutes, and " + seconds_remain + " seconds to go"
 
 
 
