@@ -2,6 +2,7 @@
 from flask import Flask, flash, redirect, render_template, request, session, abort
 from random import randint
 import shabbos_web_class
+import googleapi
 
 
 
@@ -11,9 +12,10 @@ app = Flask(__name__)
 def index():
     #return name
     
-   
+
     Candletime = shabbos_web_class.return_candletime_string()
     countdown = shabbos_web_class.time_remaining()
+    localt = googleapi.local_time()
 
 
     return render_template(
