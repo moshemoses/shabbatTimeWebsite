@@ -82,7 +82,6 @@ def time_remaining():
 	candletime = parse_data(info[0])
 	date_obj = candletime[3]
 	time_remain = date_obj - datetime.datetime.now()
-	now = datetime.datetime.now()
 	time_remain1 = str(time_remain).split(" ")
 	days_remain = time_remain1[0]
 	hours_mins_remain = time_remain1[2].split(":")
@@ -92,7 +91,7 @@ def time_remaining():
 	fl_seconds_remain = float(seconds)
 	in_seconds_remain = int(fl_seconds_remain)
 	seconds_remain =str(in_seconds_remain)
-	return "It is now" + str(now) + ". You have " + days_remain + " days, " + hours_remain + " hours, " + minutes_remain +" minutes, and " + seconds_remain + " seconds to go"
+	return "You have " + days_remain + " days, " + hours_remain + " hours, " + minutes_remain +" minutes, and " + seconds_remain + " seconds to go"
 
 
 
