@@ -15,7 +15,6 @@ def index():
 
     Candletime = shabbos_web_class.return_candletime_string()
     countdown = shabbos_web_class.time_remaining()
-    localt = googleapi.local_time()
 
 
     return render_template(
