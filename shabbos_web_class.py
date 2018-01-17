@@ -77,11 +77,12 @@ def return_candletime_string():
 
 
 def time_remaining():
-	import datetime
+	import googleapi
 	info = get_data()
 	candletime = parse_data(info[0])
 	date_obj = candletime[3]
-	time_remain = date_obj - datetime.datetime.now()
+	localtime = googleapi.local_time()
+	time_remain = date_obj - localtime
 	time_remain1 = str(time_remain).split(" ")
 	days_remain = time_remain1[0]
 	hours_mins_remain = time_remain1[2].split(":")
