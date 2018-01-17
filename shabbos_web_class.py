@@ -77,6 +77,7 @@ def return_candletime_string():
 
 
 def time_remaining():
+	idef time_remaining():
 	import datetime
 	info = get_data()
 	candletime = parse_data(info[0])
@@ -87,9 +88,14 @@ def time_remaining():
 	hours_mins_remain = time_remain1[2].split(":")
 	hours_remain = hours_mins_remain[0]
 	minutes_remain = hours_mins_remain[1]
-	return "You have " + days_remain + " days, " + hours_remain + " hours, and " + minutes_remain +" minutes to go"
+	seconds = hours_mins_remain[2]
+	fl_seconds_remain = float(seconds)
+	in_seconds_remain = int(fl_seconds_remain)
+	seconds_remain =str(in_seconds_remain)
+	return "You have " + days_remain + " days, " + hours_remain + " hours, and " + minutes_remain +" minutes and " + seconds_remain + " seconds to go"
 
-	
+
+
 
 
 
