@@ -77,7 +77,6 @@ def return_candletime_string():
 
 
 def time_remaining():
-	idef time_remaining():
 	import datetime
 	info = get_data()
 	candletime = parse_data(info[0])
