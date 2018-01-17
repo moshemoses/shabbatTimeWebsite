@@ -11,7 +11,7 @@ app = Flask(__name__)
 def index():
     #return name
     
-    rover = request.environ['HTTP_X_FORWARDED_FOR']
+    rover = shabbos_web_class.IPadd()
     Candletime = shabbos_web_class.return_candletime_string()
     countdown = shabbos_web_class.time_remaining()
 

@@ -1,6 +1,12 @@
 
 
 
+def IPadd():
+	from flask import request
+	rover = request.environ['HTTP_X_FORWARDED_FOR']
+	return rover
+
+
 def get_data():
 	import requests, json, datetime
 	#grabs your latitude, longitude and Time zone
