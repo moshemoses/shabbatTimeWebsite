@@ -92,7 +92,7 @@ def time_remaining():
 	fl_seconds_remain = float(seconds)
 	in_seconds_remain = int(fl_seconds_remain)
 	seconds_remain =str(in_seconds_remain)
-	return "It is now" + now + ". You have " + days_remain + " days, " + hours_remain + " hours, " + minutes_remain +" minutes, and " + seconds_remain + " seconds to go"
+	return "It is now" + str(now) + ". You have " + days_remain + " days, " + hours_remain + " hours, " + minutes_remain +" minutes, and " + seconds_remain + " seconds to go"
 
 
 
