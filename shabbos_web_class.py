@@ -85,9 +85,15 @@ def time_remaining():
 	time_remain = date_obj - localtime
 	time_remain1 = str(time_remain).split(" ")
 	days_remain = time_remain1[0]
+	if days_remain == None or days_remain == 0:
+		days_remain = str("0")
 	hours_mins_remain = time_remain1[2].split(":")
 	hours_remain = hours_mins_remain[0]
+	if hours_remain == None or hours_remain == 0:
+		hours_remain == str("0")
 	minutes_remain = hours_mins_remain[1]
+	if minutes_remain == None or minutes_remain == 0:
+		minutes_remain == str("0")
 	seconds = hours_mins_remain[2]
 	fl_seconds_remain = float(seconds)
 	in_seconds_remain = int(fl_seconds_remain)
