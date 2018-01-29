@@ -3,6 +3,7 @@ from flask import Flask, flash, redirect, render_template, request, session, abo
 from random import randint
 import shabbos_web_class
 import googleapi
+import testdown
 
 
 
@@ -15,6 +16,7 @@ def index():
 
     Candletime = shabbos_web_class.return_candletime_string()
     countdown = shabbos_web_class.time_remaining()
+    mover = testdown.countdown(100)
 
 
     return render_template(
