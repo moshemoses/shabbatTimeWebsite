@@ -81,6 +81,9 @@ def time_remaining():
 	info = get_data()
 	candletime = parse_data(info[0])
 	date_obj = candletime[3]
+	return (date_obj)
+	
+"""
 	localtime = googleapi.local_time()
 	time_remain = date_obj - localtime
 	time_remain1 = str(time_remain).split(" ")
@@ -99,7 +102,7 @@ def time_remaining():
 	in_seconds_remain = int(fl_seconds_remain)
 	seconds_remain =str(in_seconds_remain)
 	return (days_remain, hours_remain, minutes_remain, seconds_remain, date_obj)
-
+"""
 
 
 
