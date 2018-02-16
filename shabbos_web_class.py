@@ -3,8 +3,8 @@
 
 def IPadd():
 	from flask import request
-	rover = request.environ['HTTP_X_FORWARDED_FOR']
-	return rover
+	local_IP = request.environ['HTTP_X_FORWARDED_FOR']
+	return local_IP
 
 
 def get_data():
@@ -44,7 +44,7 @@ def get_data():
     
 
 def parse_data(data):
-	import requests, json, datetime
+	import requests, json, datetime, googleapi
 	for i in range(0, len(data)):
 		if data[i].get('category') == 'candles' or data[i].get('category') == 'havdalah':
 			date_retrival= data[i].get('date')
@@ -55,7 +55,8 @@ def parse_data(data):
 			event_date = date_obj.strftime('%A %B %d, %Y')
 			event_time = date_obj.strftime('%I:%M %p')
 			event_type = data[i].get('category')
-			if date_obj >= datetime.datetime.now():
+			#datetime changed to googleapi.local_time()for testing
+			if date_obj >= googleapi.local_time():
 				return event_date, event_time, event_type, date_obj
 			
 

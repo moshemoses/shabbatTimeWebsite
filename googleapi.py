@@ -3,8 +3,8 @@ key1 = "AIzaSyAMrFVsqH7M0lB-1K9Sf1x3E8yoN3VFIwg"
 
 def IPadd():
 	from flask import request
-	rover = request.environ['HTTP_X_FORWARDED_FOR']
-	return rover
+	local_IP = request.environ['HTTP_X_FORWARDED_FOR']
+	return local_IP
 
 def local_time():
 	import requests, json, datetime, time
@@ -29,6 +29,6 @@ def local_time():
 
 	longtime = float(dtos) + float(raw) + float(fromepoch)
 
-	dude = datetime.datetime.fromtimestamp(longtime)
-	return dude
+	date_time_obj = datetime.datetime.fromtimestamp(longtime)
+	return date_time_obj
 
