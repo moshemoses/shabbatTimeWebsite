@@ -1,9 +1,8 @@
 from flask import request
 def IPadd():
-  print(request.environ)
   try:
-    #local_IP = request.environ['HTTP_X_FORWARDED_FOR']
-    local_IP = request.environ['REMOTE_ADDR']
+    local_IP = request.environ['HTTP_X_FORWARDED_FOR']
+    #local_IP = request.environ['REMOTE_ADDR']
     print(local_IP)
     return local_IP
   except:
