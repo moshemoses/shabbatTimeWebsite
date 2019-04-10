@@ -1,10 +1,16 @@
+from grabIP import IPadd
 key1 = "AIzaSyAMrFVsqH7M0lB-1K9Sf1x3E8yoN3VFIwg"
 
 
-def IPadd():
-	from flask import request
-	local_IP = request.environ['HTTP_X_FORWARDED_FOR']
-	return local_IP
+# def IPadd():
+# 	from flask import request
+# 	try:
+# 		local_IP = request.environ['HTTP_X_FORWARDED_FOR']
+# 		return local_IP
+# 	except:
+# 		print("error in IPadd")
+# 		# generic IP from internet society of israel in jerusalem
+# 		return "74.105.72.198"
 
 def local_time():
 	import requests, json, datetime, time
