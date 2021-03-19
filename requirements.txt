@@ -14,7 +14,7 @@ idna==2.6
 iso-639==0.4.5
 iso3166==0.8
 itsdangerous==0.24
-Jinja2==2.10
+Jinja2==2.11.3
 lxml==4.1.1
 MarkupSafe==1.0
 pycryptodome==3.4.7
