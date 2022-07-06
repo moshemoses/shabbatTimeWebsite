@@ -9,7 +9,7 @@ click==6.7
 enum34==1.1.6
 Flask==0.12.2
 gunicorn==19.7.1
-html5lib==0.999
+html5lib==0.999999999
 idna==2.6
 iso-639==0.4.5
 iso3166==0.8
